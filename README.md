@@ -46,14 +46,15 @@ Monero. See [here](https://github.com/fireice-uk/cryptonote-speedup-demo/) for d
 
 If your preferred coin is not listed, you can choose one of the following mining algorithms:
 
-| 256 Kib scratchpad memory |  |
-| ---  | ---  |
-| Cryptonight_turtle |  |
+| 256 Kib scratchpad memory |
+| ---  | 
+| Cryptonight_turtle |
 
-| 1 MiB scratchpad memory |  |
-| ---  | ---  |
-| cryptonight_lite | cryptonight_lite_v7 |
-| cryptonight_lite_v7_xor (algorithm used by ipbc) |  |
+| 1 MiB scratchpad memory |
+| ---  |
+| cryptonight_lite |  |
+| cryptonight_lite_v7 |
+| cryptonight_lite_v7_xor (algorithm used by ipbc) |
 
 | 2MiB scratchpad memory |  |
 | ---  | ---  |
@@ -65,9 +66,10 @@ If your preferred coin is not listed, you can choose one of the following mining
 |  | cryptonight_v8_zelerius |   
 |  | cryptonight_v8_reversewaltz (used by graft) |   
    
-| 4 MiB scratchpad memory |  |
-| ---  | ---  |
-| cryptonight_haven | cryptonight_heavy |
+| 4 MiB scratchpad memory |
+| ---  | 
+| cryptonight_haven | 
+| cryptonight_heavy | 
 
 
 
