@@ -3,10 +3,10 @@
 ## Content Overview
 * [Configurations](#configurations)
 * [Usage on Windows](#usage-on-windows)
-* [Usage on Linux](#usage-on-linux)
+* [Usage on Linux and Macos](#usage-on-linux-and-macos)
 * [Command Line Options](#command-line-options)
 * [Use different backends](#use-different-backends)
-* [HTML and JSON API report configuraton](#html-and-json-api-report-configuraton)
+* [HTML and JSON API report configuraton](#HTML-and-JSON-API-report-configuration)
 
 ## Configurations
 
@@ -26,7 +26,7 @@ Note: If the pool is ignoring the option `rig_id` in `pools.txt` to name your wo
 `set XMRSTAK_NOWAIT=1` disable the dialog `Press any key to exit.` for non UAC execution.
 
 
-## Usage on Linux & macOS
+## Usage on Linux and macOS
 1) Open a terminal within the folder with the binary
 2) Start the miner with `./xmr-stak`
 

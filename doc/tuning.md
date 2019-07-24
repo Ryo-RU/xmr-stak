@@ -6,14 +6,13 @@
 * [Managing GPUs](#managing-GPUs)
 * [NVIDIA Backend](#nvidia-backend)
   * [Choose Value for `threads` and `blocks`](#choose-value-for-threads-and-blocks)
-  * [Add more GPUs](#add-more-gpus)
 * [AMD Backend](#amd-backend)
   * [Choose `intensity` and `worksize`](#choose-intensity-and-worksize)
-  * [Two Threads per GPU](two-threads-per-GPU)
-  * [Interleave Tuning](interleave-tuning)
-  * [disable comp_mode](#disable-comp_mode)
+  * [Two Threads per GPU](#two-threads-per-GPU)
+  * [Interleave Tuning](#interleave-tuning)
+  * [Disable comp_mode](#disable-comp-mode)
   * [Auto-tune](#auto-tune)
-  * [Change the scratchpad memory pattern](change-the-scratchpad-memory-pattern)
+  * [Change the scratchpad memory pattern](#change-the-scratchpad-memory-pattern)
   * [Increase Memory Pool](#increase-memory-pool)
   * [Scratchpad Indexing](#scratchpad-indexing)
 * [CPU Backend](#cpu-backend)
@@ -140,7 +139,7 @@ If you faced situation described in 2.2 then you need to keep in mind that this 
 - Drivers issue: Try [reinstalling your drivers](https://www.amd.com/en/support) (there are 3 possible options to try: blockchain drivers, v18.6.1, or newest version)
 ​
 
-### disable comp_mode
+### Disable comp_mode
 
 `comp_mode` means compatibility mode and removes some checks in compute kernel those takes care that the miner can be used on a wide range of AMD/OpenCL GPU devices.
 To avoid miner crashes the `intensity` should be a multiple of `worksize` if `comp_mode` is `false`.

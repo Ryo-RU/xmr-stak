@@ -83,7 +83,7 @@ Please note, this list is not complete and is not an endorsement.
 
 
 ## Get Miner
-Please note that code is developed on the [dev branch](https://github.com/fireice-uk/xmr-stak/tree/dev), if you want to check out the latest updates, before they are merged on main branch, please refer there. Master branch will always point to a version that we consider stable, so you can download the code by simply typing `git clone https://github.com/fireice-uk/xmr-stak.git`  
+Please note that code is developed on the [dev branch](https://github.com/fireice-uk/xmr-stak/commits/dev), if you want to check out the latest updates, before they are merged on main branch, please refer there. Master branch will always point to a version that we consider stable, so you can download the code by simply typing `git clone https://github.com/fireice-uk/xmr-stak.git`  
 
 Also you can find the latest releases and precompiled binaries on GitHub under [releases](https://github.com/fireice-uk/xmr-stak/releases/latest) section.
 
