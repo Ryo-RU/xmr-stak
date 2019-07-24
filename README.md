@@ -4,9 +4,11 @@
 |  |  |
 | ---  | ---  |
 | 1. [Introduction](#introduction) | 5. [Start mining](#start-mining) |
-| 2. [Features](#features) | 6. [Guides and feedback](#uides-and-feedback) |
-| 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#developer-donation) |
-| 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](doc/pgp_keys.md) |
+| 2. [Features](#features) | 6. [Guides and feedback](#guides-and-feedback) |
+| 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#default-developer-donation) |
+| 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#default-developer-donation) |
+| 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](/doc/pgp_keys.md) |
+| 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](/doc/pgp_keys.md) |
 
 
 ## Introduction
@@ -23,9 +25,9 @@ XMR-Stak is a universal open source stratum pool miner. This miner supports CPUs
   - Optional built-in auto-tune feature (helps a user to check intensity values in range).
 - Benchmark mode.
 - TLS support.
-- [JSON API for monitoring](doc/usage.md#html-and-json-api-report-configuraton)
-- [Web monitoring and statistics (html reports)](doc/usage.md#html-and-json-api-report-configuraton)
-[<img src="doc/_img/html_reports.png">](doc/usage.md#html-and-json-api-report-configuraton)
+- [JSON API for monitoring](/doc/usage.md#html-and-json-api-report-configuraton)
+- [Web monitoring and statistics (html reports)](/doc/usage.md#html-and-json-api-report-configuraton)
+[<img src="doc/_img/html_reports.png">](/doc/usage.md#html-and-json-api-report-configuraton)
 
 ## Supported coins and algorithms
 Following coins can be mined using this miner:
@@ -87,7 +89,7 @@ Please note that code is developed on the [dev branch](https://github.com/fireic
 
 Also you can find the latest releases and precompiled binaries on GitHub under [releases](https://github.com/fireice-uk/xmr-stak/releases/latest) section.
 
-If you want to compile the miner from source files, navigate to ["how to compile"](doc/compile/compile.md) section of docs or [xmr-stak forum](https://www.reddit.com/r/XmrStak/wiki/guides/startup) where you will find the latest step-by-step instructions.
+If you want to compile the miner from source files, navigate to ["how to compile"](/doc/compile/compile.md) section of docs or [xmr-stak forum](https://www.reddit.com/r/XmrStak/wiki/guides/startup) where you will find the latest step-by-step instructions.
 
 
 ## Start mining
@@ -118,11 +120,11 @@ Miner has 2 ways of initial configuring: simple and advanced. The simple method 
 ###### Video by Crypto Sewer
 
 To improve our support we created [Xmr-Stak forum](https://www.reddit.com/r/XmrStak). Check it out if you have a problem, or you are looking for most up to date config for your card and [guides](https://www.reddit.com/r/XmrStak/wiki/index).
-* [Usage](doc/usage.md)
-* [How to compile](doc/compile/compile.md)
-* [Fine tuning](doc/tuning.md)
-* [FAQ](doc/FAQ.md)
-* [Troubleshooting](doc/troubleshooting.md) (Fixing common problems)
+* [Usage](/doc/usage.md)
+* [How to compile](/doc/compile/compile.md)
+* [Fine tuning](/doc/tuning.md)
+* [FAQ](/doc/FAQ.md)
+* [Troubleshooting](/doc/troubleshooting.md) (Fixing common problems)
 
 
 ## Default Developer Donation
