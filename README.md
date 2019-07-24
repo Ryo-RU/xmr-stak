@@ -4,7 +4,7 @@
 |  |  |
 | ---  | ---  |
 | 1. [Introduction](#introduction) | 5. [Start mining](#start-mining) |
-| 2. [Features](#features) | 6. [Guides and feedback](#guides-and-feedback) |
+| 2. [Features](#features) | 6. [Guides and feedback](#additional-guides-and-feedback) |
 | 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#default-developer-donation) |
 | 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](/doc/pgp_keys.md) |
 
@@ -90,7 +90,7 @@ Also you can find the latest releases and precompiled binaries on GitHub under [
 If you want to compile the miner from source files, navigate to ["how to compile"](/doc/compile/compile.md) section of docs or [xmr-stak forum](https://www.reddit.com/r/XmrStak/wiki/guides/startup) where you will find the latest step-by-step instructions.
 
 
-## Start mining
+## Start Mining
 Miner has 2 ways of initial configuring: simple and advanced. The simple method will prompt user with minimum information. Required answers are y , (or yes), n , (or no):
 
 #### Simple setup:
@@ -113,7 +113,7 @@ Miner has 2 ways of initial configuring: simple and advanced. The simple method 
 * `Do you want to use nicehash on this pool? (y/N)` n
 * `Do you want to use multiple pools? (y/N)` Enter y if you want to se up backup pool or n
 
-## Guides and FAQ
+## Additional Guides and Feedback
 [<img src="doc/_img/stak-yt-cover.jpg">](https://www.youtube.com/playlist?list=PLAhUkom29iGMFoN8pk91JA-oqvxlmJ5H8)
 ###### Video by Crypto Sewer
 
