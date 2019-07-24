@@ -1,49 +1,34 @@
 [<img src="doc/_img/main-banner.png">](https://github.com/fireice-uk/xmr-stak/releases/latest)
 
-XMR-Stak is a universal open source stratum pool miner. This miner supports CPUs, AMD and NVIDIA GPUs and can be used various crypto currencies: Ryo, Monero, Turtlecoin, Graft, Bittube, Loki, Aeon and many more Cryptonight coins.
+## Contents
+|  |  |
+| ---  | ---  |
+| 1. [Introduction](#introduction) | 5. [Start mining](#start-mining) |
+| 2. [Features](#features) | 6. [Guides and feedback](#uides-and-feedback) |
+| 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#developer-donation) |
+| 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](doc/pgp_keys.md) |
 
 
+## Introduction
+XMR-Stak is a universal open source stratum pool miner. This miner supports CPUs, AMD and NVIDIA GPUs and can be used for mining various crypto currencies: Ryo, Monero, Turtlecoin, Graft, Bittube, Aeon and many more Cryptonight coins.
 
-## Video guides
-[<img src="doc/_img/stak-yt-cover.jpg">](https://www.youtube.com/playlist?list=PLAhUkom29iGMFoN8pk91JA-oqvxlmJ5H8)
-###### Video by Crypto Sewer
-
-## Overview
-* [Features](#features)
-* [Supported coins and algorithms](#supported-coins-and-algorithms)
-* [Download](#download)
-* [FAQ](doc/FAQ.md)
-* [Developer Donation](#default-developer-donation)
-* [Developer PGP Key's](doc/pgp_keys.md)
-
-## Guides and FAQ
-To improve our support we created [Xmr-Stak forum](https://www.reddit.com/r/XmrStak). Check it out if you have a problem, or you are looking for most up to date config for your card and [guides](https://www.reddit.com/r/XmrStak/wiki/index).
-* [Usage](doc/usage.md)
-* [How to compile](doc/compile/compile.md)
-* [Fine tuning](doc/tuning.md)
-* [FAQ](doc/FAQ.md)
-* [Troubleshooting](doc/troubleshooting.md) (Fixing common problems)
 
 ## Features
-
 - Supports all common backends (CPU/x86, AMD/NVIDIA GPU).
 - Supports all common OS (Linux, Windows and macOS).
 - Supports 15 cryptonight-variant mining algorithms + Cryptonight-GPU.
 - Easy to use and flexible in setup:
-  - guided start with easy/advanced setup option (no need to edit a config file for the first start)
-  - auto-configuration and config file creation for each backend.
-- Open source software (GPLv3)
+  - Guided start with easy/advanced setup option (no need to edit a config file for the first start).
+  - Auto-configuration and config file creation for each backend.
+  - Optional built-in auto-tune feature (helps a user to check intensity values in range).
+- Benchmark mode.
 - TLS support.
-- [HTML statistics](doc/usage.md#html-and-json-api-report-configuraton)
 - [JSON API for monitoring](doc/usage.md#html-and-json-api-report-configuraton)
-
-## HTML reports
-  <img src="https://gist.githubusercontent.com/fireice-uk/2da301131ac01695ff79539a27b81d68/raw/4c09cdeee86f94df2e9dd86b927e64aded6184f5/xmr-stak-cpu-hashrate.png" width="260"> <img src="https://gist.githubusercontent.com/fireice-uk/2da301131ac01695ff79539a27b81d68/raw/4c09cdeee86f94df2e9dd86b927e64aded6184f5/xmr-stak-cpu-results.png" width="260"> <img src="https://gist.githubusercontent.com/fireice-uk/2da301131ac01695ff79539a27b81d68/raw/4c09cdeee86f94df2e9dd86b927e64aded6184f5/xmr-stak-cpu-connection.png" width="260">
+- [Web monitoring and statistics (html reports)](doc/usage.md#html-and-json-api-report-configuraton)
+[<img src="doc/_img/html_reports.png">](doc/usage.md#html-and-json-api-report-configuraton)
 
 ## Supported coins and algorithms
-
 Following coins can be mined using this miner:
-
 
 - [Aeon](http://www.aeon.cash)
 - [BitTube](https://coin.bit.tube/)
@@ -51,7 +36,6 @@ Following coins can be mined using this miner:
 - [Graft](https://www.graft.network)
 - [Haven](https://havenprotocol.com)
 - [Lethean](https://lethean.io)
-- [Loki](https://loki.network/)
 - [Masari](https://getmasari.org)
 - [Monero](https://getmonero.org)
 - [Plenteum](https://www.plenteum.com/)
@@ -59,8 +43,8 @@ Following coins can be mined using this miner:
 - **[Ryo](https://ryo-currency.com) - Upcoming xmr-stak-gui is sponsored by Ryo Currency**
 - [Torque](https://torque.cash/)
 - [TurtleCoin](https://turtlecoin.lol)
-- [Zelerius](https://zelerius.org/)
 - [X-CASH](https://x-network.io/)
+- [Zelerius](https://zelerius.org/)
 
 **[Ryo Currency](https://ryo-currency.com)** - is a way for us to implement the ideas that we were unable to in
 Monero. See [here](https://github.com/fireice-uk/cryptonote-speedup-demo/) for details.
@@ -97,12 +81,51 @@ If your preferred coin is not listed, you can choose one of the following mining
 
 Please note, this list is not complete and is not an endorsement.
 
-## Download
 
-You can find the latest releases and precompiled binaries on GitHub under [Releases](https://github.com/fireice-uk/xmr-stak/releases).
+## Get Miner
+Please note that code is developed on the [dev branch](https://github.com/fireice-uk/xmr-stak/tree/dev), if you want to check out the latest updates, before they are merged on main branch, please refer there. Master branch will always point to a version that we consider stable, so you can download the code by simply typing `git clone https://github.com/fireice-uk/xmr-stak.git`  
+
+Also you can find the latest releases and precompiled binaries on GitHub under [releases](https://github.com/fireice-uk/xmr-stak/releases/latest) section.
+
+If you want to compile the miner from source files, navigate to ["how to compile"](doc/compile/compile.md) section of docs or [xmr-stak forum](https://www.reddit.com/r/XmrStak/wiki/guides/startup) where you will find the latest step-by-step instructions.
+
+
+## Start mining
+Miner has 2 ways of initial configuring: simple and advanced. The simple method will prompt user with minimum information. Required answers are y , (or yes), n , (or no):
+
+#### Simple setup:
+* `Use simple setup method?` y    
+* `Please enter the currency that you want to mine:` Enter currency or mining algorithm  
+* `Enter pool address (pool address:port):` Enter pool connection address:port  
+* `Username (wallet address or pool login):` Enter wallet address
+* `Password (mostly empty or x):` press Enter  
+* `Does this pool port support TLS/SSL? Use no if unknown. (y/N):` press y or n  
+
+#### Advanced setup:
+* `Use simple setup method?` n  
+* `Do you want to use the HTTP interface? Unlike the screen display, browser interface is not affected by the GPU lag. If you don't want to use it, please enter 0, otherwise enter port number that the miner should listen on` 5656
+* `Please enter the currency that you want to mine:` Enter currency or mining algorithm
+* `Enter pool address (pool address:port):` Enter pool connection address:port 
+* `Username (wallet address or pool login):` Enter wallet address
+* `Password (mostly empty or x):` press Enter
+* `Rig identifier for pool-side statistics (needs pool support). Can be empty:` Enter rig name or press Enter
+* `Does this pool port support TLS/SSL? Use no if unknown. (y/N)` Enter y or n
+* `Do you want to use nicehash on this pool? (y/N)` n
+* `Do you want to use multiple pools? (y/N)` Enter y if you want to se up backup pool or n
+
+## Guides and FAQ
+[<img src="doc/_img/stak-yt-cover.jpg">](https://www.youtube.com/playlist?list=PLAhUkom29iGMFoN8pk91JA-oqvxlmJ5H8)
+###### Video by Crypto Sewer
+
+To improve our support we created [Xmr-Stak forum](https://www.reddit.com/r/XmrStak). Check it out if you have a problem, or you are looking for most up to date config for your card and [guides](https://www.reddit.com/r/XmrStak/wiki/index).
+* [Usage](doc/usage.md)
+* [How to compile](doc/compile/compile.md)
+* [Fine tuning](doc/tuning.md)
+* [FAQ](doc/FAQ.md)
+* [Troubleshooting](doc/troubleshooting.md) (Fixing common problems)
+
 
 ## Default Developer Donation
-
 By default, the miner will donate 2% of the hashpower (2 minutes in 100 minutes) to my pool. If you want to change that, edit [donate-level.hpp](xmrstak/donate-level.hpp) before you build the binaries.
 
 If you want to donate directly to support further development, here is my wallet
