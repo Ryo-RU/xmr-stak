@@ -23,61 +23,53 @@ XMR-Stak is a universal open source stratum pool miner. This miner supports CPUs
   - Optional built-in auto-tune feature (helps a user to check intensity values in range).
 - Benchmark mode.
 - TLS support.
-- [JSON API for monitoring](/doc/usage.md#html-and-json-api-report-configuraton)
-- [Web monitoring and statistics (html reports)](/doc/usage.md#html-and-json-api-report-configuraton)
-[<img src="doc/_img/html_reports.png">](/doc/usage.md#html-and-json-api-report-configuraton)
+- [JSON API for monitoring](/doc/usage.md#HTML-and-JSON-API-report-configuration)
+- [Web monitoring and statistics (html reports)](/doc/usage.md#HTML-and-JSON-API-report-configuration)
+[<img src="doc/_img/html_reports.png">](/doc/usage.md#HTML-and-JSON-API-report-configuration)
 
 ## Supported coins and algorithms
 Following coins can be mined using this miner:
 
-- [Aeon](http://www.aeon.cash)
-- [BitTube](https://coin.bit.tube/)
-- [Conceal](https://conceal.network)
-- [Graft](https://www.graft.network)
-- [Haven](https://havenprotocol.com)
-- [Lethean](https://lethean.io)
-- [Masari](https://getmasari.org)
-- [Monero](https://getmonero.org)
-- [Plenteum](https://www.plenteum.com/)
-- [QRL](https://theqrl.org)
-- **[Ryo](https://ryo-currency.com) - Upcoming xmr-stak-gui is sponsored by Ryo Currency**
-- [Torque](https://torque.cash/)
-- [TurtleCoin](https://turtlecoin.lol)
-- [X-CASH](https://x-network.io/)
-- [Zelerius](https://zelerius.org/)
+|  |  |
+| ---  | ---  |
+| [Aeon](http://www.aeon.cash) | [Plenteum](https://www.plenteum.com/) |
+| [BitTube](https://coin.bit.tube/) | [QRL](https://theqrl.org) |
+| [Conceal](https://conceal.network) | **[Ryo](https://ryo-currency.com) - Upcoming xmr-stak-gui is sponsored by Ryo Currency** |
+| [Graft](https://www.graft.network) | [Torque](https://torque.cash/) |
+| [Haven](https://havenprotocol.com) | [TurtleCoin](https://turtlecoin.lol) |
+| [Lethean](https://lethean.io) | [X-CASH](https://x-network.io/) |
+| [Masari](https://getmasari.org) | [Zelerius](https://zelerius.org/) |
+| [Monero](https://getmonero.org) |  |
 
 **[Ryo Currency](https://ryo-currency.com)** - is a way for us to implement the ideas that we were unable to in
 Monero. See [here](https://github.com/fireice-uk/cryptonote-speedup-demo/) for details.
 
 If your preferred coin is not listed, you can choose one of the following mining algorithms:
-- 256Kib scratchpad memory
-    - cryptonight_turtle
-    
-    
-- 1MiB scratchpad memory
-    - cryptonight_lite
-    - cryptonight_lite_v7
-    - cryptonight_lite_v7_xor (algorithm used by ipbc)
-    
-    
-- 2MiB scratchpad memory
-    - cryptonight
-    - cryptonight_gpu (for Ryo's 14th of Feb fork)
-    - cryptonight_r
-    - cryptonight_masari (used in 2018)
-    - cryptonight_conceal
-    - cryptonight_v7
-    - cryptonight_v7_stellite
-    - cryptonight_v8
-    - cryptonight_v8_double (used by X-CASH)
-    - cryptonight_v8_half (used by masari and torque)
-    - cryptonight_v8_reversewaltz (used by graft)
-    - cryptonight_v8_zelerius
-    
-    
-- 4MiB scratchpad memory
-    - cryptonight_haven
-    - cryptonight_heavy
+
+| 256 Kib scratchpad memory |  |
+| ---  | ---  |
+| Cryptonight_turtle |  |
+
+| 1 MiB scratchpad memory |  |
+| ---  | ---  |
+| cryptonight_lite | cryptonight_lite_v7 |
+| cryptonight_lite_v7_xor (algorithm used by ipbc) |  |
+
+| 2MiB scratchpad memory |  |
+| ---  | ---  |
+| cryptonight | cryptonight_v7 |
+| cryptonight_gpu (for Ryo's 14th of Feb fork) | cryptonight_v7_stellite |   
+| cryptonight_conceal | cryptonight_v8 |   
+| cryptonight_r  | cryptonight_v8_half (used by masari and torque) |   
+| cryptonight_masari (used in 2018) | cryptonight_v8_double (used by X-CASH)  |   
+|  | cryptonight_v8_zelerius |   
+|  | cryptonight_v8_reversewaltz (used by graft) |   
+   
+| 4 MiB scratchpad memory |  |
+| ---  | ---  |
+| cryptonight_haven | cryptonight_heavy |
+
+
 
 Please note, this list is not complete and is not an endorsement.
 
