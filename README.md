@@ -6,8 +6,6 @@
 | 1. [Introduction](#introduction) | 5. [Start mining](#start-mining) |
 | 2. [Features](#features) | 6. [Guides and feedback](#guides-and-feedback) |
 | 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#default-developer-donation) |
-| 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#default-developer-donation) |
-| 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](/doc/pgp_keys.md) |
 | 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](/doc/pgp_keys.md) |
 
 
