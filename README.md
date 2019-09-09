@@ -32,36 +32,33 @@ Following coins can be mined using this miner:
 
 |  |  |
 | ---  | ---  |
-| [Aeon](http://www.aeon.cash) | [Plenteum](https://www.plenteum.com/) |
-| [BitTube](https://coin.bit.tube/) | [QRL](https://theqrl.org) |
-| [Conceal](https://conceal.network) | **[Ryo](https://ryo-currency.com) - Upcoming xmr-stak-gui is sponsored by Ryo Currency** |
-| [Graft](https://www.graft.network) | [Torque](https://torque.cash/) |
-| [Haven](https://havenprotocol.com) | [TurtleCoin](https://turtlecoin.lol) |
-| [Lethean](https://lethean.io) | [X-CASH](https://x-network.io/) |
-| [Masari](https://getmasari.org) | [Zelerius](https://zelerius.org/) |
-| [Monero](https://getmonero.org) |  |
+| [Aeon](http://www.aeon.cash) | [Monero](https://getmonero.org) |
+| [BitTube](https://coin.bit.tube/) | [Plenteum](https://www.plenteum.com/) |
+| [Conceal](https://conceal.network) | [QRL](https://theqrl.org) |
+| [Graft](https://www.graft.network) | **[Ryo](https://ryo-currency.com) - Upcoming Xmr-Stak-GUI is sponsored by Ryo Currency** |
+| [Haven](https://havenprotocol.com) | [X-CASH](https://x-network.io/) |
+| [Lethean](https://lethean.io) | [Zelerius](https://zelerius.org/) |
+| [Masari](https://getmasari.org) |  |
+
 
 **[Ryo Currency](https://ryo-currency.com)** - is a way for us to implement the ideas that we were unable to in
 Monero. See [here](https://github.com/fireice-uk/cryptonote-speedup-demo/) for details.
 
 If your preferred coin is not listed, you can choose one of the following mining algorithms:
 
-| 1 MiB scratchpad memory | 4 MiB scratchpad memory | 256 Kib scratchpad memory|
-| ---  | ---  | ---  | 
-| cryptonight_lite  | cryptonight_haven | Cryptonight_turtle |
-| cryptonight_lite_v7 | cryptonight_heavy |  |
-| cryptonight_lite_v7_xor (algorithm used by ipbc) |   |  |
-
-
-| 2MiB scratchpad memory |  |
-| ---  | ---  |
-| cryptonight | cryptonight_v7 |
-| cryptonight_gpu (for Ryo's 14th of Feb fork) | cryptonight_v7_stellite |   
-| cryptonight_conceal | cryptonight_v8 |   
-| cryptonight_r  | cryptonight_v8_half (used by masari and torque) |   
-| cryptonight_masari (used in 2018) | cryptonight_v8_double (used by X-CASH)  |   
-| cryptonight_v8_reversewaltz (used by graft) | cryptonight_v8_zelerius |    
-    
+| 256 KiB scratchpad memory | 1 MiB scratchpad memory | 2 MiB scratchpad memory | 4 MiB scratchpad memory |
+| --- | --- | --- | --- | 
+| cryptonight_turtle  | cryptonight_lite  | cryptonight  | cryptonight_bittube2  | 
+| ---  | cryptonight_lite_v7  | cryptonight_gpu  | cryptonight_haven  | 
+| ---  | ---  | cryptonight_conceal  | cryptonight_heavy  | 
+| ---  | ---  | cryptonight_r  | ---  | 
+| ---  | ---  | cryptonight_masari (used in 2018)  | ---  | 
+| ---  | ---  | cryptonight_v8_reversewaltz  | ---  | 
+| ---  | ---  | cryptonight_v7  | ---  | 
+| ---  | ---  | cryptonight_v8  | ---  | 
+| ---  | ---  | cryptonight_v8_half (used by masari)  | ---  | 
+| ---  | ---  | cryptonight_v8_double (used by X-CASH)  | ---  | 
+| ---  | ---  | cryptonight_v8_zelerius  | ---  | 
 
 Please note, this list is not complete and is not an endorsement.
 
