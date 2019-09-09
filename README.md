@@ -1,6 +1,13 @@
 [<img src="doc/_img/main-banner.png">](https://github.com/fireice-uk/xmr-stak/releases/latest)
 
-XMR-Stak is a universal open source stratum pool miner. This miner supports x86-64 CPUs, AMD and NVIDIA GPUs and can be used various crypto currencies: Ryo, Monero, Turtlecoin, Graft, Bittube, Loki, Aeon and many more Cryptonight coins.
+## Contents
+|  |  |
+| ---  | ---  |
+| 1. [Introduction](#introduction) | 5. [Start mining](#start-mining) |
+| 2. [Features](#features) | 6. [Guides and feedback](#additional-guides-and-feedback) |
+| 3. [Supported coins and algorithms](#supported-coins-and-algorithms) | 7. [Developer Donation](#default-developer-donation) |
+| 4. [Get miner](#get-miner) | 8. [Developer PGP Key's](/doc/pgp_keys.md) |
+
 
 ## Introduction
 XMR-Stak is a universal open source stratum pool miner. This miner supports CPUs, AMD and NVIDIA GPUs and can be used for mining various crypto currencies: Ryo, Monero, Turtlecoin, Graft, Bittube, Aeon and many more Cryptonight coins.
@@ -33,7 +40,6 @@ Following coins can be mined using this miner:
 | [Lethean](https://lethean.io) | [X-CASH](https://x-network.io/) |
 | [Masari](https://getmasari.org) | [Zelerius](https://zelerius.org/) |
 | [Monero](https://getmonero.org) |  |
-
 
 **[Ryo Currency](https://ryo-currency.com)** - is a way for us to implement the ideas that we were unable to in
 Monero. See [here](https://github.com/fireice-uk/cryptonote-speedup-demo/) for details.
@@ -90,6 +96,7 @@ Miner has 2 ways of initial configuring: simple and advanced. The simple method 
 * `Does this pool port support TLS/SSL? Use no if unknown. (y/N)` Enter y or n
 * `Do you want to use nicehash on this pool? (y/N)` n
 * `Do you want to use multiple pools? (y/N)` Enter y if you want to se up backup pool or n
+
 
 ## Additional Guides and Feedback
 [<img src="doc/_img/stak-yt-cover.jpg">](https://www.youtube.com/playlist?list=PLAhUkom29iGMFoN8pk91JA-oqvxlmJ5H8)
