@@ -110,6 +110,21 @@ class autoAdjust
 				}
 			}
 
+			// check if cryptonight_monero_v8 is selected for the user or dev pool
+			bool useCryptonight_v8 = (std::find(neededAlgorithms.begin(), neededAlgorithms.end(), cryptonight_monero_v8) != neededAlgorithms.end());
+
+			// true for all cryptonight_heavy derivates since we check the user and dev pool
+			bool useCryptonight_heavy = std::find(neededAlgorithms.begin(), neededAlgorithms.end(), cryptonight_heavy) != neededAlgorithms.end();
+
+			// true for cryptonight_gpu as main user pool algorithm
+			bool useCryptonight_gpu = ::jconf::inst()->GetCurrentCoinSelection().GetDescription(1).GetMiningAlgo() == cryptonight_gpu;
+
+			bool useCryptonight_r = ::jconf::inst()->GetCurrentCoinSelection().GetDescription(1).GetMiningAlgo() == cryptonight_r;
+
+			bool useCryptonight_r_wow = ::jconf::inst()->GetCurrentCoinSelection().GetDescription(1).GetMiningAlgo() == cryptonight_r_wow;
+
+			// 8 threads per block (this is a good value for the most gpus)
+			uint32_t default_workSize = 8;
 			size_t minFreeMem = 128u * byteToMiB;
 			/* 1000 is a magic selected limit, the reason is that more than 2GiB memory
 			 * sowing down the memory performance because of TLB cache misses
@@ -123,13 +138,19 @@ class autoAdjust
 				// UNKNOWN
 				ctx.name.compare("gfx900") == 0 ||
 				ctx.name.compare("gfx903") == 0 ||
-				ctx.name.compare("gfx905") == 0)
+				ctx.name.compare("gfx905") == 0 ||
+				// Radeon VII
+				ctx.name.compare("gfx906") == 0 ||
+				ctx.name.compare("Fiji") == 0)
 			{
 				/* Increase the number of threads for AMD VEGA gpus.
 				 * Limit the number of threads based on the issue: https://github.com/fireice-uk/xmr-stak/issues/5#issuecomment-339425089
 				 * to avoid out of memory errors
 				 */
 				maxThreads = 2024u;
+
+				if(useCryptonight_gpu)
+					default_workSize = 16u;
 			}
 
 			// NVIDIA optimizations
@@ -141,19 +162,6 @@ class autoAdjust
 				maxThreads = 40000u;
 				minFreeMem = 512u * byteToMiB;
 			}
-
-			// check if cryptonight_monero_v8 is selected for the user or dev pool
-			bool useCryptonight_v8 = (std::find(neededAlgorithms.begin(), neededAlgorithms.end(), cryptonight_monero_v8) != neededAlgorithms.end());
-
-			// true for all cryptonight_heavy derivates since we check the user and dev pool
-			bool useCryptonight_heavy = std::find(neededAlgorithms.begin(), neededAlgorithms.end(), cryptonight_heavy) != neededAlgorithms.end();
-
-			// true for cryptonight_gpu as main user pool algorithm
-			bool useCryptonight_gpu = ::jconf::inst()->GetCurrentCoinSelection().GetDescription(1).GetMiningAlgo() == cryptonight_gpu;
-
-			bool useCryptonight_r = ::jconf::inst()->GetCurrentCoinSelection().GetDescription(1).GetMiningAlgo() == cryptonight_r;
-
-			bool useCryptonight_r_wow = ::jconf::inst()->GetCurrentCoinSelection().GetDescription(1).GetMiningAlgo() == cryptonight_r_wow;
 
 			// set strided index to default
 			ctx.stridedIndex = 1;
@@ -203,11 +211,14 @@ class autoAdjust
 			size_t perThread = hashMemSize + 240u;
 			size_t maxIntensity = memPerThread / perThread;
 			size_t possibleIntensity = std::min(maxThreads, maxIntensity);
-			// map intensity to a multiple of the compute unit count, 8 is the number of threads per work group
-			size_t intensity = (possibleIntensity / (8 * ctx.computeUnits)) * ctx.computeUnits * 8;
-			// in the case we use two threads per gpu we can be relax and need no multiple of the number of compute units
-			if(numThreads == 2)
-				intensity = (possibleIntensity / 8) * 8;
+			// map intensity to a multiple of the compute unit count, default_workSize is the number of threads per work group
+			size_t intensity = (possibleIntensity / (default_workSize * ctx.computeUnits)) * ctx.computeUnits * default_workSize;
+
+			size_t computeUnitUtilization = ((possibleIntensity * 100)  / (default_workSize * ctx.computeUnits)) % 100;
+			// in the case we use two threads per gpu or if we can utilize over 75% of the compute units
+			// we can be relax and need no multiple of the number of compute units
+			if(numThreads == 2 || computeUnitUtilization >= 75)
+				intensity = (possibleIntensity / default_workSize) * default_workSize;
 
 			//If the intensity is 0, then it's because the multiple of the unit count is greater than intensity
 			if(intensity == 0)
@@ -225,9 +236,8 @@ class autoAdjust
 					conf += "  // gpu: " + ctx.name + std::string("  compute units: ") + std::to_string(ctx.computeUnits) + "\n";
 					conf += "  // memory:" + std::to_string(memPerThread / byteToMiB) + "|" +
 							std::to_string(ctx.maxMemPerAlloc / byteToMiB) + "|" + std::to_string(maxAvailableFreeMem / byteToMiB) + " MiB (used per thread|max per alloc|total free)\n";
-					// set 8 threads per block (this is a good value for the most gpus)
 					conf += std::string("  { \"index\" : ") + std::to_string(ctx.deviceIdx) + ",\n" +
-							"    \"intensity\" : " + std::to_string(intensity) + ", \"worksize\" : " + std::to_string(8) + ",\n" +
+							"    \"intensity\" : " + std::to_string(intensity) + ", \"worksize\" : " + std::to_string(default_workSize) + ",\n" +
 							"    \"affine_to_cpu\" : false, \"strided_index\" : " + std::to_string(ctx.stridedIndex) + ", \"mem_chunk\" : 2,\n"
 																													   "    \"unroll\" : " +
 							std::to_string(numUnroll) + ", \"comp_mode\" : true, \"interleave\" : " + std::to_string(ctx.interleave) + "\n" +
